@@ -1,4 +1,5 @@
 # Disjoint-Set
+```
 Class Disjoint_Set{
   vector<int> rank,size,parent;
   public:
@@ -45,4 +46,5 @@ Class Disjoint_Set{
         }
       }
       
-}
+};
+```
