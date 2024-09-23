@@ -1,9 +1,10 @@
 # Disjoint-Set
 ```
-Class Disjoint_Set{
-  vector<int> rank,size,parent;
+class Disjoint_Set{
+  
   public:
-      Disjoint_set(int n){
+    vector<int> rank,size,parent;
+      Disjoint_Set(int n){
         rank.resize(n+1,0);
         parent.resize(n+1);
         size.resize(n+1,1);
@@ -18,7 +19,7 @@ Class Disjoint_Set{
       void unionByrank(int u,int v){
         int ulp_u=findUpar(u);
         int ulp_v=findUpar(v);
-        if(ulp_u==ulpv) return;
+        if(ulp_u==ulp_v) return;
         if(rank[ulp_u]<rank[ulp_v]){
             parent[ulp_u]=ulp_v;
             rank[ulp_v]++;
@@ -35,7 +36,7 @@ Class Disjoint_Set{
       void unionBySize(int u,int v){
         int ulp_u=findUpar(u);
         int ulp_v=findUpar(v);
-        if(ulp_u==ulpv) return;
+        if(ulp_u==ulp_v) return;
         if(rank[ulp_u]<rank[ulp_v]){
             parent[ulp_u]=ulp_v;
             size[ulp_v]+=size[ulp_u];
